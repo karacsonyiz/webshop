@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Termék</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/menubar.css"/>
+    <link rel="stylesheet" href="css/feedback.css"/>
+    <link rel="stylesheet" href="css/product.css"/>
+</head>
+<body>
+
+<div class="container">
+
+    <ul class="nav nav-pills nav-fill" id ="to-append">
+        <li class="nav-item nav-item-index" id="to-hide-index">
+            <a class="nav-link" href="/index.html">Főoldal</a>
+        </li>
+        <li class="nav-item nav-item-products" id="to-hide-allproducts">
+            <a class="nav-link" href="/products.html">Termékek</a>
+        </li>
+        <li class="nav-item nav-item-user-basket" id="to-hide-basket">
+            <a class="nav-link" href="/basket.html">Kosár</a>
+        </li>
+        <li class="nav-item nav-item-user-order" id="to-hide-myorder">
+            <a class="nav-link" href="/myorders.html">Rendeléseim</a>
+        </li>
+        <li class="nav-item nav-item-user-profile" id="to-hide-profile">
+            <a class="nav-link" href="/profile.html">Profil</a>
+        </li>
+        <li class="nav-item nav-item-login" id="to-hide-login">
+            <a class="nav-link" href="/login.html">Bejelentkezés</a>
+        </li>
+        <li class="nav-item nav-item-admin" id="to-hide-product">
+            <a class="nav-link" href="/adminproducts.html">Termék-adminisztráció</a>
+        </li>
+        <li class="nav-item nav-item-users" id="to-hide-user">
+            <a class="nav-link" href="/users.html">Felhasználók</a>
+        </li>
+        <li class="nav-item nav-item-orders" id="to-hide-orders">
+            <a class="nav-link" href="/orders.html">Rendelések</a>
+        </li>
+        <li class="nav-item nav-item-categories" id = "to-hide-categories">
+            <a class="nav-link" href="/categories.html">Kategóriák</a>
+        </li>
+        <li class="nav-item nav-item-dashboard" id="to-hide-dashboard">
+            <a class="nav-link" href="/dashboard.html">Statisztikák</a>
+        </li>
+        <li class="nav-item nav-item-reports" id="to-hide-reports">
+            <a class="nav-link" href="/reports.html">Havi jelentések</a>
+        </li>
+        <li class="nav-item nav-item-logout" id="to-hide-logout">
+            <a class="nav-link" href="/logout">Kijelentkezés</a>
+        </li>
+
+        <div class="card" style="width: 12rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="username"></h5>
+                <input type="hidden" id="id-hidden-input"/>
+            </div>
+        </div>
+
+    </ul>
+
+    <span>
+    <h1 id="if-hided"></h1>
+    </span>
+
+    <div class="container-2">
+
+    <div class="left-column">
+        <img src="" id="image-src">
+    </div>
+
+
+    <!-- Right Column -->
+    <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+            <span id ="product-category"></span>
+            <h1 id="product-name"></h1>
+            <h3 id="product-author"> </h3>
+            <h5 id="product-average"></h5>
+        </div>
+
+        <div id="product-desc">
+            <span id ="product-id"></span>
+            <br>
+            <span id ="product-address"></span>
+            <br>
+        </div>
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+            <span id="product-price"></span>
+        </div>
+        <br>
+        <input type="number" name="quantity" value="1" id="quantity" min="1">
+        <button type="button" id="puttobasket" class="btn btn-success">Kosárba</button>
+    </div>
+    </div>
+
+
+    <div id ="feedback-hide">
+        <h3>Értékelje termékünket!</h3>
+        <div class="rating-score-div">
+            <label for="rating-score">Pontszám:</label>
+            <input type="number" id="rating-score" min="1" max="5" value="5"/>
+        </div>
+        <div class="rating-text-div">
+            <label for="rating-textarea">Szöveges értékelés:</label>
+            <textarea class="form-control rounded-0" id="rating-textarea" rows="5"></textarea>
+        </div>
+        <div class="star-holder">
+            <div class="star" id="star-1" onclick="oneStarOnclick()"></div>
+            <div class="star-holder">
+                <div class="star" id="star-2" onclick="twoStarOnclick()"></div>
+                <div class="star-holder">
+                    <div class="star" id="star-3" onclick="threeStarOnclick()"></div>
+                    <div class="star-holder">
+                        <div class="star" id="star-4" onclick="fourStarOnclick()"></div>
+                        <div class="star-holder">
+                            <div class="star" id="star-5" onclick="fiveStarOnclick()"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" id="rating-submit" class="btn btn-success">Értékelés elküldése</button>
+    </div>
+
+    <div class="product-ratings"></div>
+
+</div>
+
+<script src="js/menubar.js"></script>
+<script src="js/product.js"></script>
+
+</body>
+
+</html>

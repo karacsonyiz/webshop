@@ -1,0 +1,2 @@
+ALTER TABLE orderitem
+ADD COLUMN quantity BIGINT DEFAULT 1;

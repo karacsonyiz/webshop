@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Termékek</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/basket.css"/>
+    <link rel="stylesheet" href="css/menubar.css"/>
+    <link rel="stylesheet" href="css/buttons.css"/>
+</head>
+<body>
+
+<div class="container">
+
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item nav-item-index" id="to-hide-index">
+            <a class="nav-link" href="/index.html">Főoldal</a>
+        </li>
+        <li class="nav-item nav-item-products" id="to-hide-allproducts">
+            <a class="nav-link" href="/products.html">Termékek</a>
+        </li>
+        <li class="nav-item nav-item-user-basket" id="to-hide-basket">
+            <a class="nav-link" href="/basket.html">Kosár</a>
+        </li>
+        <li class="nav-item nav-item-user-order" id="to-hide-myorder">
+            <a class="nav-link" href="/myorders.html">Rendeléseim</a>
+        </li>
+        <li class="nav-item nav-item-user-profile" id="to-hide-profile">
+            <a class="nav-link" href="/profile.html">Profil</a>
+        </li>
+        <li class="nav-item nav-item-login" id="to-hide-login">
+            <a class="nav-link" href="/login.html">Bejelentkezés</a>
+        </li>
+        <li class="nav-item nav-item-admin" id="to-hide-product">
+            <a class="nav-link" href="/adminproducts.html">Termék-adminisztráció</a>
+        </li>
+        <li class="nav-item nav-item-users" id="to-hide-user">
+            <a class="nav-link" href="/users.html">Felhasználók</a>
+        </li>
+        <li class="nav-item nav-item-orders" id="to-hide-orders">
+            <a class="nav-link" href="/orders.html">Rendelések</a>
+        </li>
+        <li class="nav-item nav-item-categories" id="to-hide-categories">
+            <a class="nav-link" href="/categories.html">Kategóriák</a>
+        </li>
+        <li class="nav-item nav-item-dashboard" id="to-hide-dashboard">
+            <a class="nav-link" href="/dashboard.html">Statisztikák</a>
+        </li>
+        <li class="nav-item nav-item-reports" id="to-hide-reports">
+            <a class="nav-link" href="/reports.html">Havi jelentések</a>
+        </li>
+        <li class="nav-item nav-item-logout" id="to-hide-logout">
+            <a class="nav-link" href="/logout">Kijelentkezés</a>
+        </li>
+
+        <div class="card" style="width: 12rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="username"></h5>
+                <input type="hidden" id="id-hidden-input"/>
+            </div>
+        </div>
+
+    </ul>
+
+    <h1>Kosár</h1>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Azonosító</th>
+            <th>Cím</th>
+            <th>Szerző</th>
+            <th>Ár</th>
+            <th>Darabszám</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="basket-tbody">
+
+        </tbody>
+    </table>
+    <div class="address-selecter-div">
+        <select id="address-selector" class="form-control">
+            <option value="" disabled selected>Előző rendelési címek</option>
+        </select>
+        <br>
+    </div>
+    <div>
+        <h3>Kérjük adjon meg szállítási címet</h3>
+        <div class="zip-code-div">
+            <label for="zip-code-field">Irányítószám</label>
+            <textarea class="form-control rounded-0" id="zip-code-field" rows="1"></textarea>
+        </div>
+        <div class="city-div">
+            <label for="city-field">Város</label>
+            <textarea class="form-control rounded-0" id="city-field" rows="1"></textarea>
+        </div>
+        <div class="street-div">
+            <label for="street-field">Utca és házszám</label>
+            <textarea class="form-control rounded-0" id="street-field" rows="1"></textarea>
+        </div>
+    </div>
+    <p id="totalPrice"></p>
+    <input type="reset" id="reset-button" value="Kosár ürítése" class="btn btn-secondary"/>
+    <input type="submit" id="order-button" value="Megrendelés" class="btn btn-primary"/>
+</div>
+<script src="js/menubar.js"></script>
+<script src="js/basket.js"></script>
+
+</body>
+
+</html>

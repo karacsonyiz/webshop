@@ -1,0 +1,43 @@
+#one-feedback-div {
+    display: flex;
+}
+
+#one-feedback-div:nth-child(even) {
+    background-color: #DEE2E6;
+}
+
+#one-feedback-div:nth-child(odd) {
+    background-color: #FFF;
+}
+
+#left-div {
+    flex: 2;
+    align-self: center;
+    text-align: center;
+}
+
+#middle-div {
+    flex: 6;
+    margin: 10px;
+}
+
+#right-div {
+    flex: 1;
+}
+
+#edit-button, #delete-button {
+    margin: 10px;
+}
+
+#rating-submit, #puttobasket {
+    margin: 20px 0px;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+#one-feedback-div {
+    padding: 20px;
+    margin-bottom: 20px;
+}

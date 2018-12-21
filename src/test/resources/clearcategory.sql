@@ -1,0 +1,2 @@
+truncate products;
+truncate category;

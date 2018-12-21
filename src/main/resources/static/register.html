@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regisztráció</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/products.css"/>
+    <link rel="stylesheet" href="css/menubar.css"/>
+    <link rel="stylesheet" href="css/registration.css"/>
+</head>
+
+<div class="container">
+
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item nav-item-index" id="to-hide-index">
+            <a class="nav-link" href="/index.html">Főoldal</a>
+        </li>
+        <li class="nav-item nav-item-products" id="to-hide-allproducts">
+            <a class="nav-link" href="/products.html">Termékek</a>
+        </li>
+        <li class="nav-item nav-item-user-basket" id="to-hide-basket">
+            <a class="nav-link" href="/basket.html">Kosár</a>
+        </li>
+        <li class="nav-item nav-item-user-order" id="to-hide-myorder">
+            <a class="nav-link" href="/myorders.html">Rendeléseim</a>
+        </li>
+        <li class="nav-item nav-item-user-profile" id="to-hide-profile">
+            <a class="nav-link" href="/profile.html">Profil</a>
+        </li>
+        <li class="nav-item nav-item-login" id="to-hide-login">
+            <a class="nav-link" href="/login.html">Bejelentkezés</a>
+        </li>
+        <li class="nav-item nav-item-admin" id="to-hide-product">
+            <a class="nav-link" href="/adminproducts.html">Termék-adminisztráció</a>
+        </li>
+        <li class="nav-item nav-item-users" id="to-hide-user">
+            <a class="nav-link" href="/users.html">Felhasználók</a>
+        </li>
+        <li class="nav-item nav-item-orders" id = "to-hide-orders">
+            <a class="nav-link" href="/orders.html">Rendelések</a>
+        </li>
+        <li class="nav-item nav-item-categories" id = "to-hide-categories">
+            <a class="nav-link" href="/categories.html">Kategóriák</a>
+        </li>
+        <li class="nav-item nav-item-dashboard" id = "to-hide-dashboard">
+            <a class="nav-link" href="/dashboard.html">Statisztikák</a>
+        </li>
+        <li class="nav-item nav-item-reports" id = "to-hide-reports">
+            <a class="nav-link" href="/reports.html">Havi jelentések</a>
+        </li>
+        <li class="nav-item nav-item-logout" id="to-hide-logout">
+            <a class="nav-link" href="/logout">Kijelentkezés</a>
+        </li>
+
+        <div class="card" style="width: 12rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="username"></h5>
+                <input type="hidden" id="id-hidden-input"/>
+            </div>
+        </div>
+
+    </ul>
+
+    <div class="container">
+        <h1>Regisztráció</h1>
+        <p>A regisztrációhoz adja meg a lenti adatokat. A jelszónak legalább 8 karakter hosszúnak kell lennie és
+            tartalmazni kell kisbetűt, nagybetűt és számot.</p>
+        <hr />
+        <form id="register-form">
+            <div class="form-group row">
+                <label for="last-name" class="col-sm-2 col-form-label">Vezetéknév</label>
+                <div class="col-5">
+                    <input type="text" class="form-control" placeholder="Kérjük, adja meg a vezetéknevét" id="last-name" name="last-name" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="first-name" class="col-sm-2 col-form-label">Keresztnév</label>
+                <div class="col-5">
+                    <input type="text" class="form-control" placeholder="Kérjük, adja meg a keresztnevét" id="first-name" name="first-name"required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="loginname" class="col-sm-2 col-form-label">Felhasználónév</label>
+                <div class="col-5">
+                    <input type="text" class="form-control" placeholder="Kérjük, adja meg a felhasználónevet" id="loginname" name="loginname" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-sm-2 col-form-label">Jelszó</label>
+                <div class="col-5">
+                    <input type="password" class="form-control" placeholder="Kérjük, adja meg a jelszót" id="password" name="password" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password-repeat" class="col-sm-2 col-form-label">Jelszó mégegyszer</label>
+                <div class="col-5">
+                    <input type="password" class="form-control" placeholder="Kérjük, adja meg a jelszót mégegyszer" id="password-repeat" required />
+                </div>
+            </div>
+            <input type="submit" id="registerbtn" value="Regisztráció" class="btn btn-primary"/>
+            <hr />
+
+        </form>
+
+        <p id="login-link">Már van saját fiókja? <a href="login.html">Jelentkezzen be itt</a></p>
+
+
+    </div>
+
+    <script src="js/menubar.js"></script>
+    <script src="js/register.js"></script>
+
+    </body>
+</html>

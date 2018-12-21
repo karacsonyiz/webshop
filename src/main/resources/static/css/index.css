@@ -1,0 +1,47 @@
+.container {
+    height:100vh;
+}
+
+#main-div {
+display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+#div-sold {
+border: 3px inset;
+margin-top: 40px;
+margin-bottom: 40px;
+margin-left: 20px;
+margin-right: 20px;
+display: table-cell;
+width: 30%;
+height: 200px;
+table-layout: fixed;
+border-spacing: 10px;
+position: relative;
+text-align: center;
+}
+
+#button-div {
+position: relative;
+display: table-cell;
+width: 30%;
+margin-bottom: 5px;
+margin-left:auto;
+margin-right:auto;
+}
+
+img {
+    width:125px;
+    height:200px;
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: grayscale(100%);
+}

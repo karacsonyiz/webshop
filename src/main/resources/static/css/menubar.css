@@ -1,0 +1,19 @@
+#username {
+display: flex;
+justify-content: center; /* align horizontal */
+align-items: center; /* align vertical */
+}
+
+.card {
+padding: 0px;
+border-radius: 1em;
+margin: 0;
+}
+
+.card-title {
+margin: 0;
+}
+
+.card-body {
+padding: 7%;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Termék-adminisztráció</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/menubar.css"/>
+
+</head>
+<body>
+
+    <div class="container">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item nav-item-index" id="to-hide-index">
+                    <a class="nav-link" href="/index.html">Főoldal</a>
+                </li>
+                <li class="nav-item nav-item-products" id="to-hide-allproducts">
+                    <a class="nav-link" href="/products.html">Termékek</a>
+                </li>
+                <li class="nav-item nav-item-user-basket" id="to-hide-basket">
+                    <a class="nav-link" href="/basket.html">Kosár</a>
+                </li>
+                <li class="nav-item nav-item-user-order" id="to-hide-myorder">
+                    <a class="nav-link" href="/myorders.html">Rendeléseim</a>
+                </li>
+                <li class="nav-item nav-item-user-profile" id="to-hide-profile">
+                <a class="nav-link" href="/profile.html">Profil</a>
+                </li>
+                <li class="nav-item nav-item-login" id = "to-hide-login">
+                    <a class="nav-link" href="/login.html">Bejelentkezés</a>
+                </li>
+                <li class="nav-item nav-item-admin" id = "to-hide-product">
+                    <a class="nav-link" href="/adminproducts.html">Termék-adminisztráció</a>
+                </li>
+                <li class="nav-item nav-item-users" id = "to-hide-user">
+                    <a class="nav-link" href="/users.html">Felhasználók</a>
+                </li>
+                <li class="nav-item nav-item-orders" id = "to-hide-orders">
+                    <a class="nav-link" href="/orders.html">Rendelések</a>
+                </li>
+                <li class="nav-item nav-item-categories" id = "to-hide-categories">
+                    <a class="nav-link" href="/categories.html">Kategóriák</a>
+                </li>
+                <li class="nav-item nav-item-dashboard" id = "to-hide-dashboard">
+                    <a class="nav-link" href="/dashboard.html">Statisztikák</a>
+                </li>
+                <li class="nav-item nav-item-reports" id = "to-hide-reports">
+                    <a class="nav-link" href="/reports.html">Havi jelentések</a>
+                </li>
+                <li class="nav-item nav-item-logout" id = "to-hide-logout">
+                    <a class="nav-link" href="/logout">Kijelentkezés</a>
+                </li>
+
+                <div class="card" style="width: 12rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="username"></h5>
+                        <input type="hidden" id="id-hidden-input"/>
+                    </div>
+                </div>
+
+            </ul>
+
+            <h1>Termékek</h1>
+
+            <form id="product-form" enctype="multipart/form-data">
+
+                <div class="form-group row">
+                    <label for="id-input" class="col-sm-2 col-form-label">Azonosító</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="id-input" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="producer-input" class="col-sm-2 col-form-label">Szerző</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="producer-input" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="name-input" class="col-sm-2 col-form-label">Cím</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="name-input" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="address-input" class="col-sm-2 col-form-label">URL</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="address-input" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="price-input" class="col-sm-2 col-form-label">Ár</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="price-input" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="category-select" class="col-sm-2 col-form-label">Kategória</label>
+                    <div class="col-sm-10">
+                        <select id="category-select" class="form-control">
+                            <option value="0" disabled selected hidden>Válassz kategóriát!</option>
+                        </select>
+                    </div>
+                </div>
+
+                <input type="submit" id="submit-button" value="Új termék hozzáadása" class="btn btn-primary"/>
+            <input type="reset" id="reset-button" value="Mégse" class="btn btn-secondary" />
+        </form>
+
+        <form id="picture-form">
+            <div class="form-group row">
+                <label for="picture-select" class="col-sm-2 col-form-label">Kép feltöltése</label>
+                <div class="col-sm-10">
+                    <input type="file" id="picture-select" accept="image/*">
+                </div>
+            </div>
+            <input type="submit" id="submit-picture" value="Kép feltöltése" class="btn btn-primary"/>
+        </form>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Azonosító</th>
+                <th>Szerző</th>
+                <th>Cím</th>
+                <th>URL</th>
+                <th>Ár</th>
+                <th>Kategória</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="products-tbody">
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <script src="js/menubar.js"></script>
+    <script src="js/adminproducts.js"></script>
+
+</body>
+
+</html>

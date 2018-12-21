@@ -1,0 +1,2 @@
+ALTER TABLE orders
+ADD COLUMN delivery_address VARCHAR(255) NOT NULL;

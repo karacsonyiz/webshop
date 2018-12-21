@@ -1,0 +1,2 @@
+ALTER TABLE basket
+ADD COLUMN quantity BIGINT DEFAULT 1;
